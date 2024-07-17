@@ -1,0 +1,164 @@
+footer {
+    background-color: $heading-color;
+
+    &.footer-2 {
+        background-color: #fff;
+
+        .footer-widgets-wrapper, .footer-bottom-wrapper {
+            a, p, span {
+                color: #617686 !important;
+            }
+        }
+
+        .widget-title {
+            
+            h5 {
+                color: $heading-color !important;
+            }
+        }
+
+        .footer-bottom-content {
+            border-top: 1px solid rgba($color: #080F1E, $alpha: 0.1) !important;
+        }
+    }
+
+	.footer-widgets-wrapper {
+        padding-top: 70px;
+        padding-bottom: 100px;
+
+        @media (max-width: 991px) {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+
+        .col-12 {
+            overflow: hidden;
+        }
+
+        a, p, span {
+            color: rgba(#fff, 0.7);
+        }
+
+        .single-footer-widget {
+            margin-top: 30px;
+
+            .widget-title {
+
+                h5 { 
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                    text-transform: capitalize;
+                }
+            }
+
+            ul {
+
+                li { 
+                    display: block;
+
+                    a { 
+                        display: block;
+                        font-size: 18px;
+                        font-weight: 400;
+                        margin-top: 10px;
+
+                        &:hover {
+                            color: #F54748 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        .about-us-widget { 
+
+            .footer-logo { 
+                margin-bottom: 20px;
+            }
+
+            p { 
+                font-size: 18px;
+            }
+        }
+
+	}
+
+	.footer-bottom-wrapper { 
+
+		.footer-bottom-content {
+            border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+            padding: 35px 0px;
+
+            @media (max-width: 767px) {
+                padding: 20px 0px;
+                text-align: center;
+            }
+
+            .site-copyright { 
+
+                p { 
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #fff;
+
+                    a { 
+                        line-height: inherit;
+                        font-size: inherit;
+                        font-weight: 500;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .social-links { 
+
+                &.red-color {
+                    a {
+                        color: #fff !important;
+                        background: rgba($color: $second-color, $alpha: 0.3);
+
+                        &:hover {
+                            background: #F54748;
+                        }
+                    }
+                }
+
+                &.gray-bg {
+                    a {
+                        background-color: rgba($color: $heading-color, $alpha: 0.3);
+                        color: #fff !important;
+                    }
+                }
+
+                a { 
+                    display: inline-block;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: rgba($color: #fff, $alpha: 0.3);
+                    color: #fff;
+                    font-size: 14px;
+                    margin-left: 15px;
+                    transition: all .3s ease-in-out;
+
+                    @media (max-width: 767px) {
+                        margin-left: 10px;
+                    }
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:hover {
+                        background-color: $theme-color;
+                        color: #fff !important;
+                    }
+                }
+            }
+        }
+	}
+}

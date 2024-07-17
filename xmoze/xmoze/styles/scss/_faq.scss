@@ -1,0 +1,317 @@
+.step-accordion {
+	.accordion {
+		list-style-type: none;
+		counter-reset: css-counter 0;
+
+		@media (max-width: 500px) {
+			padding: 0px;
+		}
+
+		.accordion-item {
+			border: 0;
+			border-radius: 0;
+			counter-increment: css-counter 1;
+			position: relative;
+			z-index: 1;
+			background-color: transparent;
+
+			&:first-of-type {
+				padding-top: 0;
+			}
+
+			&:last-child {
+				.accordion-header {
+					&::before {
+						display: none;
+						opacity: 0;
+					}
+				}
+			}
+
+			.accordion-header {
+				font-size: inherit;
+				line-height: inherit;
+				position: relative;
+				z-index: 1;
+
+				&::before {
+					position: absolute;
+					left: 25px;
+					top: 75px;
+					content: "";
+					z-index: -1;
+					font-family: "xmoze";
+					font-size: 45px;
+					font-weight: 400;
+					transform: translateX(-50%);
+					color: $theme-color;
+
+					@media (max-width: 767px) {
+						top: 90px;
+					}
+				}
+
+				&:focus {
+					outline: 0;
+					border: 0;
+				}
+
+				.accordion-button {
+					padding-left: 70px;
+					font-size: 20px;
+					font-weight: 600;
+					color: $heading-color;
+					overflow: hidden;
+					background-color: transparent;
+
+					@media (max-width: 500px) {
+						padding-left: 60px;
+					}
+
+					&:focus {
+						outline: 0;
+					}
+
+					&:not(.collapsed) {
+						color: $theme-color;
+						background-color: transparent;
+						box-shadow: none;
+					}
+
+					&::after {
+						display: none;
+					}
+
+					&::before {
+						content: counter(css-counter);
+						position: absolute;
+						width: 50px;
+						height: 50px;
+						background: $theme-color;
+						border-radius: 50px;
+						color: $white;
+						font-size: 18px;
+						line-height: 50px;
+						text-align: center;
+						left: 0;
+					}
+				}
+			}
+
+			.accordion-collapse {
+				.accordion-body {
+					padding-left: 70px;
+					padding-top: 0;
+
+					@media (max-width: 500px) {
+						padding-left: 60px;
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.faq-video-wrapper {
+	height: 615px;
+	position: relative;
+	border-radius: 3px;
+	z-index: 1;
+
+	@media (max-width: 991px) {
+		height: 500px;
+	}
+
+	@media (max-width: 767px) {
+		height: 350px;
+	}
+
+	&::after {
+		position: absolute;
+		left: -67px;
+		top: -53px;
+		content: "";
+		width: 87px;
+		height: 87px;
+		background-image: url("/img/icons/top-lines.png");
+	}
+
+	&::before {
+		border-radius: 3px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		content: "";
+		background: linear-gradient(180deg, rgba(2, 2, 30, 0) 0%, rgba(2, 2, 30, 0.8) 100%);
+		mix-blend-mode: multiply;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+	}
+
+	.arrow-icon {
+		position: absolute;
+		left: -85px;
+		bottom: 50px;
+		z-index: -1;
+
+		@media (max-width: 767px) {
+			left: -50px;
+
+			img {
+				max-width: 55%;
+			}
+		}
+	}
+}
+
+.faq-accordion {
+	.accordion {
+		list-style-type: none;
+
+		.accordion-item {
+			border: 0;
+			border-radius: 0;
+			counter-increment: css-counter 1;
+			position: relative;
+			// z-index: 1;
+			background-color: transparent;
+			border-bottom: 1px solid rgba($color: $heading-color, $alpha: 0.1);
+			padding: 10px 0px;
+
+			&:first-of-type {
+				padding-top: 0;
+			}
+
+			.accordion-header {
+				font-size: inherit;
+				line-height: inherit;
+				position: relative;
+				// z-index: 1;
+
+				&:focus {
+					outline: 0;
+					border: 0;
+				}
+
+				.accordion-button {
+					padding-left: 50px;
+					font-size: 20px;
+					font-weight: 600;
+					color: $theme-color;
+					overflow: hidden;
+					background-color: transparent;
+
+					@media (max-width: 767px) {
+						padding-right: 30px;
+						font-size: 18px;
+					}
+
+					&:focus {
+						outline: 0;
+					}
+
+					&:not(.collapsed) {
+						color: $heading-color;
+						background-color: transparent;
+						box-shadow: none;
+
+						&::after {
+							content: "";
+							transform: rotate(0deg);
+						}
+					}
+
+					&::after {
+						font-weight: 700;
+						content: "";
+						font-family: $fa;
+						background: transparent;
+
+						@media (max-width: 767px) {
+							margin-right: -30px;
+						}
+					}
+
+					&::before {
+						content: "\f128";
+						position: absolute;
+						width: 30px;
+						height: 30px;
+						background: $theme-color;
+						border-radius: 50%;
+						color: $white;
+						font-size: 16px;
+						line-height: 30px;
+						text-align: center;
+						font-family: $fa;
+						left: 0;
+					}
+				}
+			}
+
+			.accordion-collapse {
+				.accordion-body {
+					padding-left: 50px;
+					padding-top: 0;
+
+					@media (max-width: 767px) {
+						padding-left: 20px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.faq-bottom {
+	font-size: 18px;
+
+	a {
+		font-weight: 600;
+		color: $theme-color;
+		font-size: 18px;
+		padding-left: 5px;
+	}
+}
+
+.faq-ask {
+	.accordion {
+		.accordion-item {
+			filter: drop-shadow(0px 4px 80px rgba(8, 15, 30, 0.06));
+			border: 0px;
+			border-radius: 10px;
+			background-color: #fff;
+			margin-top: 30px;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding: 10px;
+
+			@media (max-width: 767px) {
+				margin-top: 15px;
+			}
+
+			.accordion-header {
+				.accordion-button {
+					padding-left: 60px;
+					color: #617686 !important;
+
+					@media (max-width: 767px) {
+						padding-left: 45px;
+					}
+
+					&::before {
+						left: 10px;
+
+						@media (max-width: 767px) {
+							left: 5px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

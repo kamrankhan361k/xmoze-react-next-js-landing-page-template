@@ -1,0 +1,78 @@
+/*
+Theme Name: Xmoze
+Author: MThemeus
+Author URI: https://themeforest.net/user/mthemeus/
+Description: React, Next js Landing Template
+Version: 1.0.0
+*/
+
+// BASIC
+@import "basic";
+// MIXIN
+@import "variables";
+// TYPOGRAPHY
+@import "typography";
+// MIX
+@import "mix";
+// HELPER
+@import "helper";
+// ANIMATION
+@import "animation";
+// Button
+@import "btn";
+// Preloader
+@import "preloader";
+// Accordion
+@import "accordion";
+
+/* ----------------------------------
+    Template Section Styles
+ ------------------------------------*/
+
+// Menu - Header Section
+@import "header";
+
+// Hero Slide - Section
+@import "hero";
+
+// Section Title - Heading
+@import "section";
+
+// About - Section
+@import "about";
+
+// Features - Section
+@import "features";
+
+// services - Section
+@import "services";
+
+// testimonial - Section
+@import "testimonial";
+
+// price - Section
+@import "price";
+
+// project - Section
+@import "project";
+
+// Call To Action - Section
+@import "cta";
+
+// team - Section
+@import "team";
+
+// funfact - Section
+@import "funfact";
+
+// FAQ - Section
+@import "faq";
+
+// Blog - Section
+@import "blog";
+
+// Contact Us - Section
+@import "contact";
+
+// footer - Section
+@import "footer";

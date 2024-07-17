@@ -1,0 +1,14 @@
+.accordion__answer-wrapper {
+	height: 0;
+	overflow: hidden;
+	transition: height ease 0.3s;
+}
+.accordion-header {
+	.control {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translate(-20px, -50%);
+		font-size: 30px;
+	}
+}

@@ -1,0 +1,275 @@
+.single-testimoinal-item {
+	position: relative;
+	padding: 40px;
+	border-radius: 3px;
+	margin-top: 30px;
+	transition: all 0.3s ease-in-out;
+
+	&.solid-bg,
+	&.slick-center {
+		background-color: #fff;
+		box-shadow: 0px 4px 80px rgba(8, 15, 30, 0.06);
+	}
+
+	&.style-2 {
+		background: $section-bg;
+		border-radius: 10px;
+
+		.rating {
+			margin-top: -4px;
+			margin-bottom: 20px;
+		}
+
+		.client-info {
+			margin-bottom: 0px;
+			margin-top: 30px;
+		}
+
+		.feedback {
+			padding-bottom: 30px;
+			border-bottom: 1px solid rgba($color: $textcolor, $alpha: 0.1);
+		}
+	}
+
+	.client-info {
+		overflow: hidden;
+		clear: both;
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+
+		.client-img {
+			float: left;
+			overflow: hidden;
+			margin-right: 20px;
+			border-radius: 50%;
+			width: 70px;
+			height: 70px;
+			background-color: #eee;
+		}
+
+		.client-name {
+			h6 {
+				margin-bottom: 0;
+				font-size: 20px;
+				font-weight: 600;
+				line-height: 20px;
+				position: relative;
+				padding-left: 10px;
+				text-transform: capitalize;
+
+				&::before {
+					position: absolute;
+					left: 0;
+					content: "-";
+				}
+			}
+
+			span {
+				font-size: 16px;
+				font-weight: 500;
+				line-height: 1;
+				text-transform: capitalize;
+			}
+		}
+	}
+
+	.feedback {
+		font-size: 18px;
+		color: $heading-color;
+		font-weight: 500;
+
+		@media (max-width: 767px) {
+			font-size: 17px;
+		}
+	}
+
+	.rating {
+		margin-top: 25px;
+
+		.icon-star {
+			color: #ffd44b;
+			display: inline-block;
+			line-height: 1;
+			font-size: 16px;
+		}
+	}
+}
+
+.single-testimoinal-box {
+	padding: 35px;
+	background-color: #fff;
+	border-radius: 10px;
+	margin-top: 30px;
+
+	@media (max-width: 767px) {
+		text-align: center;
+	}
+
+	.client-img {
+		background-color: #eee;
+		border-radius: 50%;
+		width: 70px;
+		height: 70px;
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+
+	.feedback {
+		color: $second-color;
+		font-weight: 500;
+	}
+
+	.client-info {
+		margin-top: 30px;
+
+		.client-name {
+			h6 {
+				margin-bottom: 0px;
+				font-weight: 500;
+				font-size: 18px;
+			}
+
+			span {
+				color: #617686;
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.testimonial-carousel-active {
+	/* the parent */
+	.slick-list {
+		padding: 0px !important;
+
+		.slick-track {
+			padding-top: 10px;
+			padding-bottom: 60px;
+		}
+	}
+
+	.slick-dots {
+		position: relative;
+		bottom: -20px;
+		list-style: none;
+		display: block;
+		text-align: center;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+
+		li {
+			position: relative;
+			display: inline-block;
+			margin: 0 5px;
+			padding: 0;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+
+			&.slick-active {
+				button {
+					width: 45px;
+					opacity: 1;
+				}
+			}
+
+			button {
+				border: 0;
+				display: block;
+				outline: none;
+				width: 17px;
+				height: 8px;
+				border-radius: 4px;
+				color: transparent;
+				background-color: $theme-color;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+				opacity: 0.3;
+
+				&:hover,
+				&:focus {
+					outline: none;
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.testimonial-nav-carousel-active {
+	&.slick-slider {
+		margin: 0 -15px;
+	}
+
+	.slick-slide {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
+}
+
+.testimoinial-nav {
+	&.style-2 {
+		.testimonial-nav-prev,
+		.testimonial-nav-next {
+			border-color: #1a1aff;
+			color: #1a1aff;
+			border-radius: 5px;
+			font-size: 20px;
+
+			&:hover {
+				background-color: #1a1aff;
+				color: #fff;
+			}
+		}
+
+		.testimonial-nav-prev {
+			border-color: #1a1aff;
+			background-color: #1a1aff;
+			color: #fff;
+		}
+	}
+
+	&.red-color {
+		.testimonial-nav-prev,
+		.testimonial-nav-next {
+			border-color: #f54748;
+			color: #f54748;
+			border-radius: 5px;
+
+			&:hover {
+				background-color: #f54748;
+				color: #fff;
+			}
+		}
+
+		.testimonial-nav-prev {
+			border-color: #f54748;
+			background-color: #f54748;
+			color: #fff;
+		}
+	}
+
+	.testimonial-nav-prev {
+		margin-right: 8px;
+	}
+
+	.testimonial-nav-prev,
+	.testimonial-nav-next {
+		display: inline-block;
+		padding: 12px 10px;
+		color: $second-color;
+		line-height: 1;
+		font-size: 16px;
+		border: 2px solid $second-color;
+		box-sizing: border-box;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $second-color;
+			color: #fff;
+		}
+	}
+}
